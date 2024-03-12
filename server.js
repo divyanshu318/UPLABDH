@@ -3,6 +3,8 @@ import colors from 'colors';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import connectDB from './config/db.js';
+import authRoutes from './routes/authRoute.js';
+import cors from "cors";
 
 dotenv.config();
 
@@ -11,6 +13,14 @@ const app = express();
 
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(cors({
+  origin: "http://localhost:3000",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204,
+}));
+
+app.use('/api/auth',authRoutes);
 
 app.get("/",(req,res)=>{
     res.send("<h1>UPLABDH</h1>");

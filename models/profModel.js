@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const proffSchema = new mongoose.Schema(
+const profSchema = new mongoose.Schema(
     {
     name: {
       type: String,
@@ -32,4 +32,4 @@ const proffSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
-export default mongoose.model('proff',proffSchema);
+export default mongoose.model('prof',profSchema);

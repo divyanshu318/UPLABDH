@@ -19,8 +19,14 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/logIn">LogIn</NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/signUp">SignUp</NavLink>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="signupDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  SignUp
+                </a>
+                <div className="dropdown-menu" aria-labelledby="signupDropdown">
+                  <NavLink className="dropdown-item" to="/signUp/studentSignup">STUDENT</NavLink>
+                  <NavLink className="dropdown-item" to="/signUp/professorSignup">PROFESSOR</NavLink>
+                </div>
               </li>
             </ul>
           </div>
