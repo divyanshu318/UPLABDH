@@ -1,0 +1,74 @@
+[
+    {
+        "roomid": "1",
+        "floor": "0",
+        "category": "GS",
+        "name": "GS-3",
+        "capacity": "100",
+        "booked": false
+    },
+    {
+        "roomid": "2",
+        "floor": "0",
+        "category": "GS",
+        "name": "GS-4",
+        "capacity": "100",
+        "booked": false
+    },
+    {
+        "roomid": "3",
+        "floor": "0",
+        "category": "GS",
+        "name": "GS-5",
+        "capacity": "100",
+        "booked": false
+    },
+    {
+        "roomid": "4",
+        "floor": "0",
+        "category": "GS",
+        "name": "GS-6",
+        "capacity": "100",
+        "booked": false
+    },
+    {
+        "roomid": "5",
+        "floor": "1",
+        "category": "FEW",
+        "name": "FEW-6",
+        "capacity": "60",
+        "booked": false
+    },
+    {
+        "roomid": "6",
+        "floor": "1",
+        "category": "FEW",
+        "name": "FEW-7",
+        "capacity": "60",
+        "booked": false
+    },
+    {
+        "roomid": "7",
+        "floor": "1",
+        "category": "FEW",
+        "name": "FEW-8",
+        "capacity": "60",
+        "booked": false
+    },
+    {
+        "roomid": "8",
+        "floor": "2",
+        "category": "SEW",
+        "name": "SEW-1",
+        "capacity": "40",
+        "booked": false
+    },
+    {
+        "roomid": "6",
+        "floor": "1",
+        "category": "SEW",
+        "name": "SEW-10",
+        "capacity": "60",
+        "booked": false
+    }
+]

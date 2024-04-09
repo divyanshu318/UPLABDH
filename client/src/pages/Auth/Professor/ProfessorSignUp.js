@@ -14,7 +14,7 @@ const ProfessorSignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API}/api/auth/profSignup`, {
+      const res = await axios.post(`http://localhost:8080/api/auth/profSignup`, {
         name,
         email,
         password,

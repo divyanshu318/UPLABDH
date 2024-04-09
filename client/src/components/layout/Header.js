@@ -1,10 +1,21 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/auth';
 
 const Header = () => {
+  const[auth,setAuth] = useAuth();
+  const navigate = useNavigate();
   const navbarStyle = {
     backgroundColor: 'lightyellow',
   };
+  const handleLogOut = ()=>{
+    setAuth({
+      ...auth,
+      user:null,
+      token: null
+    });
+    localStorage.removeItem('profile')
+  }
 
   return (
     <>
@@ -16,6 +27,7 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
+            {!auth.user ? (<>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/logIn">LogIn</NavLink>
               </li>
@@ -28,6 +40,12 @@ const Header = () => {
                   <NavLink className="dropdown-item" to="/signUp/professorSignup">PROFESSOR</NavLink>
                 </div>
               </li>
+            </>) : (<>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/logIn" onClick={handleLogOut}>LogOut</NavLink>
+              </li>
+            </>)}
+              
             </ul>
           </div>
         </div>
